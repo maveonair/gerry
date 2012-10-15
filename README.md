@@ -1,4 +1,3 @@
-
 # gerry[![Build Status](https://travis-ci.org/maveonair/gerry.png)][travis]
 
 Simple Ruby wrapper for the Gerrit Code Review REST-API.
@@ -9,6 +8,28 @@ Simple Ruby wrapper for the Gerrit Code Review REST-API.
 [http://rdoc.info/github/maveonair/gerry][documentation]
 
 [documentation]: http://rdoc.info/github/maveonair/gerry
+
+## Examples
+### Get the global capabilities
+```ruby
+client = Gerry.new('https://review')
+client.account_capabilities
+=> {"queryLimit"=>{"min"=>0, "max"=>500}}
+```
+
+### List projects
+```ruby
+client = Gerry.new('https://review')
+client.projects
+=> { "awesome"=>{ "description"=>"Awesome project"}}
+```
+
+### List open changes
+```ruby
+client = Gerry.new('https://review')
+client.changes(['q=is:open'])
+=> [{"project"=>"awesome", "branch"=>"master", "id"=>"Ibfedd978...."}]
+```
 
 ## Supported Ruby versions
 This library is [tested again][travis] the following Ruby versions
