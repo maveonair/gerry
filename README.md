@@ -14,7 +14,7 @@ Simple Ruby wrapper for the Gerrit Code Review REST-API.
 ```ruby
 client = Gerry.new('https://review')
 client.account_capabilities
-=> {"queryLimit"=>{"min"=>0, "max"=>500}}
+=> {"queryLimit"=>{"min"=>0, "max"=>250}}
 ```
 
 ### List projects
