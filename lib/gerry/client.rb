@@ -6,8 +6,6 @@ module Gerry
     include HTTParty
     headers 'Accept' => 'application/json'
     
-    debug_output $stdout
-    
     require_relative 'client/accounts'
     require_relative 'client/changes'
     require_relative 'client/projects'
