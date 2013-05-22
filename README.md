@@ -2,7 +2,7 @@
 
 Simple Ruby wrapper for the Gerrit Code Review REST-API.
 
-[travis]: https://travis-ci.org/maveonair/gerry
+[travis]: https://travis-ci.org/aerickson/gerry
 
 ## Documentation
 [http://rdoc.info/github/maveonair/gerry][documentation]
