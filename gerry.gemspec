@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.date              = Time.now.strftime('%Y-%m-%d')
   s.summary           = "Simple Ruby wrapper for the Gerrit Code Review REST-API."
   s.homepage          = "http://github.com/aerickson/gerry"
-  s.email             = "aerickson@gmail.com"
+  s.email             = "mettler.fabian@gmail.com"
   s.authors           = [ "Fabian Mettler", "Andrew Erickson" ]
   s.has_rdoc          = false
 
