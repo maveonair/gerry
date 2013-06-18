@@ -1,3 +1,4 @@
+require "rspec/expectations"
 require 'webmock/rspec'
 
 require_relative '../lib/gerry'
