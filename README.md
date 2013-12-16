@@ -9,6 +9,14 @@ Simple Ruby wrapper for the Gerrit Code Review REST-API.
 
 [documentation]: http://rdoc.info/github/maveonair/gerry
 
+## Install
+```
+git clone https://github.com/maveonair/gerry.git
+cd gerry
+gem build gerry.gemspec
+gem install gerry-0.0.1.gem
+```
+
 ## Examples
 ### Get the global capabilities
 ```ruby
