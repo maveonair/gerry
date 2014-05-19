@@ -23,6 +23,17 @@ module Gerry
         end
       end
 
+      def post(url, data)
+        if @username && @password
+          auth = { username: @username, password: @password }
+          response = self.class.post("/a#{url}", body: data, digest_auth: auth)
+          parse(response)
+        else
+          response = self.class.post(url, body: data)
+          parse(response)
+        end
+      end
+
       private
       def parse(response)
         unless response.code.eql?(200)
