@@ -9,7 +9,6 @@ module Gerry
         options.map{|v| "#{v}"}.join('&')
       end
 
-      private
       class RequestError < StandardError
       end
 
@@ -24,6 +23,7 @@ module Gerry
         end
       end
 
+      private
       def parse(response)
         unless response.code.eql?(200)
           raise_request_error(response)
