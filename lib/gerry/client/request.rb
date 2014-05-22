@@ -24,7 +24,8 @@ module Gerry
       end
 
       def post(url, data)
-        options = { :headers => { 'Content-Type' => 'application/json' }, :body => data.to_json }
+        compact_data = data.to_h.delete_if { |k, v| v.nil? }
+        options = { :headers => { 'Content-Type' => 'application/json' }, :body => compact_data.to_json }
         if @username && @password
           auth = { username: @username, password: @password }
           response = self.class.post("/a#{url}", options.merge({:digest_auth => auth }))
