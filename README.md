@@ -43,6 +43,15 @@ client.changes(['q=is:open'])
 => [{"project"=>"awesome", "branch"=>"master", "id"=>"Ibfedd978...."}]
 ```
 
+### Post review
+```ruby
+client = Gerry.new('https://review', 'user', 'password')
+input = Gerry::ReviewInput("Very nice, but doesn't compile!")
+input.labels = { 'Code-Review' => 1, 'Verified' => -1 }
+client.review('myProject~master~I8473b95934b5732ac55d26311a706c9c2bde9940', 'current', input)
+=> {"labels"=>{"Code-Review"=>1, "Verified"=>-1}}
+```
+
 ## Supported Ruby versions
 This library is [tested again][travis] the following Ruby versions
 
